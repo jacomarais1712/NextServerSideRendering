@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'CyberAlert';
+  src: url('/fonts/CyberAlert.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.magicianHeader {
+    font-family: 'CyberAlert', sans-serif;
+    font-size: 50px;
+    background: linear-gradient(to right,rgba(127, 255, 0, 1), rgba(0, 255, 255, 1));
+    background-clip: text;
+}
+
+.homeBackground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('/home-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.homeButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+.HomeButtons {
+  height: 80px;
+  width: 100px;
+  font-size: 20px;
+  background-color: chartreuse;
+  margin: 50px;
+  border-radius: 15px;
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+.HomeButtons:hover {
+  height: 100px;
+  width: 120px;
+  background-color: aqua;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) { /* Laptops */
+  .magicianHeader {
+    font-size: 40px; /* Smaller font size */
+  }
+
+  .homeButtonsContainer {
+    width: 150px; /* Adjust button container width */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .HomeButtons {
+    width: 90px; /* Adjust button width */
+    font-size: 18px; /* Smaller font size for buttons */
+  }
+}
+
+@media (max-width: 992px) { /* Tablets */
+  .magicianHeader {
+    font-size: 30px; /* Smaller font size */
+  }
+
+  .homeButtonsContainer {
+    width: 100%; /* Full width */
+    flex-direction: column; /* Stack buttons vertically */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .HomeButtons {
+    width: 80%; /* Full width for buttons */
+    font-size: 16px; /* Smaller font size */
+    margin: 10px 0; /* Vertical margin */
+  }
+}
+
+@media (max-width: 576px) { /* Phones */
+  .magicianHeader {
+    font-size: 24px; /* Even smaller font size */
+  }
+
+  .HomeButtons {
+    width: 70%; /* Full width for buttons */
+    font-size: 14px; /* Smaller font size */
+  }
+}

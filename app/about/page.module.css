@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'Rushblade';
+  src: url('/fonts/Rushblade.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.aboutContainer {
+    background-image: url('/about-background.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.aboutHeader {
+    font-family: 'Rushblade', sans-serif;
+    font-size: 48px; /* Adjust font size as needed */
+    background: linear-gradient(to right, #90c108, #e9ff25); /* Your gradient colors */
+        background-clip: text; /* For WebKit browsers */
+        -webkit-background-clip: text; /* For WebKit browsers */
+        -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    text-align: center;
+}
+
+.descriptionBlock {
+    display: flex;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.descriptionContainer {
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border: 5px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    background: black;
+    backdrop-filter: blur(20px) ;
+}
+
+.description {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.NavButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100px;
+}
+
+.NavButton {
+    text-align: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    background-color: orange;
+    border-radius: 15px;
+    transition: 0.3s ease, transform 0.3s ease;
+}
+
+.NavButton:hover {
+  width: 120px;
+  background-color: chartreuse;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) { /* Laptops */
+    .aboutHeader {
+        font-size: 40px; /* Smaller font size */
+    }
+
+    .descriptionBlock {
+        margin-left: 50px; /* Adjust margin */
+    }
+
+    .descriptionContainer {
+        width: 80%; /* Responsive width */
+        max-height: none; /* Allow for dynamic height */
+    }
+
+    .description {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    .NavButton {
+        width: 90px; /* Adjust button width */
+        font-size: 18px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 992px) { /* Tablets */
+    .aboutHeader {
+        font-size: 30px; /* Smaller font size */
+    }
+
+    .descriptionBlock {
+        margin-left: 20px; /* Further reduce margin */
+    }
+
+    .descriptionContainer {
+        width: 90%; /* Make it wider on smaller screens */
+    }
+
+    .description {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .NavButton {
+        width: 80px; /* Adjust button width */
+        font-size: 16px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 576px) { /* Phones */
+    .aboutHeader {
+        font-size: 24px; /* Even smaller font size */
+    }
+
+    .descriptionBlock {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .descriptionContainer {
+        width: 95%; /* Full width on small screens */
+    }
+
+    .description {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .NavButton {
+        width: 70px; /* Adjust button width */
+        font-size: 14px; /* Smaller font size */
+    }
+}
